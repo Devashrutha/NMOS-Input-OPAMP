@@ -96,8 +96,8 @@ Before finding the (W/L) ratios we need to know the upCox and unCox values of PM
 The Beff(Effective beta) is found from each of the mosfets using the above W and L. Then we find the upCox and unCox using the formula: 
 
 ```math
-Beta_p = \mu_p \ {Cox} \left(\frac{W}{L}\right)\ and\ Beta_n = \mu_n \ {Cox} \left(\frac{W}{L}\right)\\
-\mu_p \text { Cox }=160 \mu \mathrm{A} / V^2 and \mu_n \text { Cox }=315 \mu \mathrm{A} / V^2\\
+& Beta_p = \mu_p \ {Cox} \left(\frac{W}{L}\right)\ and\ Beta_n = \mu_n \ {Cox} \left(\frac{W}{L}\right)\\
+& \mu_p \text { Cox }=160 \mu \mathrm{A} / V^2 and \mu_n \text { Cox }=315 \mu \mathrm{A} / V^2\\
 ```
 
 Now let us consider the minimum ```L = 240nm``` (L>2*90nm) to avoid any effect of Channel Length Modulation, ```Cc = 600fF``` and the ```Slew Rate = 20uA``` (Ibias/Cc, ends up to be 12uA but its the minimum). Using the following schematic can find the W/L ratios.
