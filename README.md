@@ -29,7 +29,7 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#specifications">Specifications</a></li>
       </ul>
     </li>
     <li><a href="#design-of-m1-and-m2">Design of M1 and M2</a></li>
