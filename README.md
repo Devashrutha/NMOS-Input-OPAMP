@@ -21,9 +21,9 @@
   <summary>INDEX</summary>
   <ol>
     <li>
-      <a href="#Introduction">Introduction</a>
+      <a href="#introduction">Introduction</a>
       <ul>
-        <li><a href="#requirements">Specifications</a></li>
+        <li><a href="#requirements">Requirements</a></li>
       </ul>
     </li>
     <li>
@@ -32,12 +32,12 @@
         <li><a href="#prerequisites">Prerequisites</a></li>
       </ul>
     </li>
-    <li><a href="#Design of M1 and M2">Design of M1 and M2</a></li>
-    <li><a href="#Design of M3 and M4">Design of M3 and M4</a></li>
-    <li><a href="#Design of M5 and M8">Design of M5 and M8</a></li>
-    <li><a href="#Design of M6">Design of M6</a></li>
-    <li><a href="#Design of M7">Design of M7</a></li>
-    <li><a href="Layout Design">Layout Design</a></li>
+    <li><a href="#design of m1 and m2">Design of M1 and M2</a></li>
+    <li><a href="#design of m3 and m4">Design of M3 and M4</a></li>
+    <li><a href="#design of m5 and m8">Design of M5 and M8</a></li>
+    <li><a href="#design of m6">Design of M6</a></li>
+    <li><a href="#design of m7">Design of M7</a></li>
+    <li><a href="layout design">Layout Design</a></li>
   </ol>
 </details>
 
