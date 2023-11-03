@@ -144,13 +144,13 @@ $$
 
 The design of M3 and M4 depends on ```ICMR+```, consider only M3 and M1 from the OPAMP schematic.
 ```math
-\begin{aligned}
-& I_3=\mu_p \text{C_{ox}}\left(\frac{W}{L}\right) \frac{\left(V_{GS}-V_{t}\right)^2}{2} \\
-& V_{G S}=\sqrt{\frac{2 I_3}{\mu_p C_{ox}}}+\left|V_{t3}\right|
-& \therefore V_{D 1}=V_{D D}-\sqrt{\frac{2 I_3}{\beta_p}}-\left|V_{t3}\right
-& I C M R^{+} & \leq V_{D_1}+V_{t_1} \\
-& \left(\frac{W}{L}\right)_3=\frac{2 I D_3}{\left.\mu_p C_{ox}\left[V_{D D}-I C M R^{+}-\left|V_{t3}\right|_{\text {max }}+V_{t1}\right]_{\text {min }}\right]^2}
-\end{aligned}
+\begin{align}
+I_3 &= \mu_p \text{C}_{ox}\left(\frac{W}{L}\right) \frac{\left(V_{GS}-V_{t}\right)^2}{2} \\
+V_{GS} &= \sqrt{\frac{2 I_3}{\mu_p \text{C}_{ox}}} + \left|V_{t3}\right| \\
+\therefore\, V_{D1} &= V_{DD} - \sqrt{\frac{2 I_3}{\beta_p}} - \left|V_{t3}\right| \\
+ICMR^{+} &\leq V_{D1} + V_{t1} \\
+\left(\frac{W}{L}\right)_3 &= \frac{2 I_{D3}}{\left.\mu_p \text{C}_{ox}\left[V_{DD} - ICMR^{+} - \left|V_{t3}\right|_{\text{max}} + V_{t1}\right]_{\text{min}}\right]^2}
+\end{align}
 ```
 Now we need to find Vt3max and Vt1min. This can be done using another schematic consisting of only the differential input stage of the OPAMP and simulating the DC oerating points in the ADE.
 
