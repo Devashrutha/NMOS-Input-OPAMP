@@ -143,7 +143,7 @@ $$
 ## Design of M3 and M4
 
 The design of M3 and M4 depends on ```ICMR+```, consider only M3 and M1 from the OPAMP schematic.
-```math
+```Latex
 $$
 \begin{aligned}
 & I_3=\mu_p \text{C_{ox}}\left(\frac{W}{L}\right) \frac{\left(V_{GS}-V_{t}\right)^2}{2} \\
