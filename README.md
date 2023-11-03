@@ -98,7 +98,7 @@ The Beff(Effective beta) is found from each of the mosfets using the above W and
 ```math
 \begin{aligned}
 & Beta_p = \mu_p \ {Cox} \left(\frac{W}{L}\right)\ and\ Beta_n = \mu_n \ {Cox} \left(\frac{W}{L}\right)\\
-& \mu_p \text { Cox }=160 \mu \mathrm{A} / V^2 and \mu_n \text { Cox }=315 \mu \mathrm{A} / V^2\\
+& \mu_p \text { Cox }=160 \mu \mathrm{A} / V^2\ and \mu_n \text { Cox }=315 \mu \mathrm{A} / V^2\\
 \end{aligned}
 ```
 
@@ -110,13 +110,12 @@ Now let us consider the minimum ```L = 240nm``` (L>2*90nm) to avoid any effect o
 The design of M1 and M2 depends on the ```GBP``` and ```Cc```
 
 ```math
-$$
+
 \begin{aligned}
 g_{m_1} & =GBP \times C_c \times 2 \pi \\
 g_{m_1} & =113.1 \mu \mathrm{S}\\
 \therefore Let\ g_{m_1} &=120 \mu \mathrm{s}\\
 \end{aligned}
-$$
 
 $$
 \begin{aligned}
