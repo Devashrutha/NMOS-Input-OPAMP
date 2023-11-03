@@ -835,7 +835,7 @@ See the [open issues](https://github.com/othneildrew/Best-README-Template/issues
 ## Design of M5 and M8
 
 The design of M5 and M8 depends on ```ICMR-```, consider only M2 and M5 from the OPAMP schematic.
-
+```math
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <mtable displaystyle="true" columnalign="right left right left right left right left right left right left" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" rowspacing="3pt">
     <mtr>
@@ -1388,7 +1388,7 @@ The design of M6 depends on ```PM```, to achieve 60 degrees PM:
     </mtr>
   </mtable>
 </math>
-
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
