@@ -23,13 +23,13 @@
     <li>
       <a href="#introduction">Introduction</a>
       <ul>
-        <li><a href="#requirements">Requirements</a></li>
+        <li><a href="#specifications">Specifications</a></li>
       </ul>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#specifications">Specifications</a></li>
+        <li><a href="#prerequisites">Prerequisites</a></li>
       </ul>
     </li>
     <li><a href="#design-of-m1-and-m2">Design of M1 and M2</a></li>
