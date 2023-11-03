@@ -1,5 +1,3 @@
-# NMOS-Input-OPAMP
-
 
 <!-- PROJECT LOGO -->
 <br />
