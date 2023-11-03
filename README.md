@@ -111,15 +111,15 @@ The design of M1 and M2 depends on the ```GBP``` and ```Cc```
 
 ```math
 \begin{aligned}
-g_{m_1} & =GBP \times C_c \times 2 \pi \\
-g_{m_1} & =113.1 \mu \mathrm{S}\\
-\therefore Let\ g_{m_1} &=120 \mu \mathrm{s}\\
-I_D =\mu_n \text{Cox}\left(\frac{W}{L}\right) \cdot \frac{\left(V_{G S}-V_t\right)^2}{2} \\
-g_m =\frac{\partial I_{D S}}{\partial V_{G S}}=\mu_n \text{Cox}\left(\frac{W}{L}\right)\left(V_{G S}-V_T\right)\\
-{g_{m}}^2=\left[\mu_n \text{Cox}\left(\frac{w}{L}\right)\right]^2 \frac{\left(V_{G S}-V_{t}\right)^2}{2} \times 2 \\
-{g_m}^2=2 I_D \times \mu_n \text{Cox}\left(\frac{W}{L}\right)\\
-\left(\frac{W}{L}\right) = 2.28575\\
-\therefore Let\left(\frac{W}{L}\right) = 3\\
+& g_{m_1} & =GBP \times C_c \times 2 \pi \\
+& g_{m_1} & =113.1 \mu \mathrm{S}\\
+& \therefore Let\ g_{m_1} &=120 \mu \mathrm{s}\\
+& I_D =\mu_n \text{Cox}\left(\frac{W}{L}\right) \cdot \frac{\left(V_{G S}-V_t\right)^2}{2} \\
+& g_m =\frac{\partial I_{D S}}{\partial V_{G S}}=\mu_n \text{Cox}\left(\frac{W}{L}\right)\left(V_{G S}-V_T\right)\\
+& {g_{m}}^2=\left[\mu_n \text{Cox}\left(\frac{w}{L}\right)\right]^2 \frac{\left(V_{G S}-V_{t}\right)^2}{2} \times 2 \\
+& {g_m}^2=2 I_D \times \mu_n \text{Cox}\left(\frac{W}{L}\right)\\
+& \left(\frac{W}{L}\right) = 2.28575\\
+& \therefore Let\left(\frac{W}{L}\right) = 3\\
 \end{aligned}
 ```
 
@@ -133,11 +133,11 @@ g_m =\frac{\partial I_{D S}}{\partial V_{G S}}=\mu_n \text{Cox}\left(\frac{W}{L}
 The design of M3 and M4 depends on ```ICMR+```, consider only M3 and M1 from the OPAMP schematic.
 ```math
 \begin{align}
-I_3 &= \mu_p \text{C}_{ox}\left(\frac{W}{L}\right) \frac{\left(V_{GS}-V_{t}\right)^2}{2} \\
-V_{GS} &= \sqrt{\frac{2 I_3}{\mu_p \text{C}_{ox}}} + \left|V_{t3}\right| \\
-\therefore\, V_{D1} &= V_{DD} - \sqrt{\frac{2 I_3}{\beta_p}} - \left|V_{t3}\right| \\
-ICMR^{+} &\leq V_{D1} + V_{t1} \\
-\left(\frac{W}{L}\right)_3 &= \frac{2 I_{D3}}{\left.\mu_p \text{C}_{ox}\left[V_{DD} - ICMR^{+} - \left|V_{t3}\right|_{\text{max}} + V_{t1}\right]_{\text{min}}\right]^2}
+& I_3 &= \mu_p \text{C}_{ox}\left(\frac{W}{L}\right) \frac{\left(V_{GS}-V_{t}\right)^2}{2} \\
+& V_{GS} &= \sqrt{\frac{2 I_3}{\mu_p \text{C}_{ox}}} + \left|V_{t3}\right| \\
+& \therefore\, V_{D1} &= V_{DD} - \sqrt{\frac{2 I_3}{\beta_p}} - \left|V_{t3}\right| \\
+& ICMR^{+} &\leq V_{D1} + V_{t1} \\
+& \left(\frac{W}{L}\right)_3 &= \frac{2 I_{D3}}{\left.\mu_p \text{C}_{ox}\left[V_{DD} - ICMR^{+} - \left|V_{t3}\right|_{\text{max}} + V_{t1}\right]_{\text{min}}\right]^2}
 \end{align}
 ```
 Now we need to find Vt3max and Vt1min. This can be done using another schematic consisting of only the differential input stage of the OPAMP and simulating the DC oerating points in the ADE.
@@ -193,15 +193,15 @@ The design of M5 and M8 depends on ```ICMR-```, consider only M2 and M5 from the
 The design of M6 depends on ```PM```, to achieve 60 degrees PM:
 ```math
 \begin{gathered}
-g_{m6} \geqslant 10 \cdot g_{m 1} \\
-g_{m6} \geqslant 1200 \mu . \\
-\frac{\left(\frac{W}{L}\right)_6}{\left(\frac{W}{L}\right)_4}=\frac{I_6}{I_4}=\frac{g_{m 6}}{g_{m 4}} \\
-q \\
-g_{m4}=\sqrt{\mu_p C_{ox}\cdot\left(\frac{W}{L}\right)_4 \cdot 2 I_D} \\
+& g_{m6} \geqslant 10 \cdot g_{m 1} \\
+& g_{m6} \geqslant 1200 \mu . \\
+& \frac{\left(\frac{W}{L}\right)_6}{\left(\frac{W}{L}\right)_4}=\frac{I_6}{I_4}=\frac{g_{m 6}}{g_{m 4}} \\
+& q \\
+& g_{m4}=\sqrt{\mu_p C_{ox}\cdot\left(\frac{W}{L}\right)_4 \cdot 2 I_D} \\
 
-g_{m_4}=169.11 \mu \\
+& g_{m_4}=169.11 \mu \\
 
-\therefore\left(\frac{W}{L}\right)_6=64
+& \therefore\left(\frac{W}{L}\right)_6=64
 \end{gathered}
 ```
 
