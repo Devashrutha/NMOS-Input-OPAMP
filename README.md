@@ -1396,14 +1396,14 @@ The design of M6 depends on ```PM```, to achieve 60 degrees PM:
 ## Design of M7
 
 The design of M6 depends on ```W/L of M5```, to achieve 60 degrees PM:
-
+```math
 \begin{aligned}
 & \frac{I_6}{I_4}=\frac{(W / L)_6}{(W / L)_4} \\
 & I_6=\simeq 72 \mu \mathrm{A} \\
 & \frac{\left(\frac{W}{L}\right)_7}{\left(\frac{W}{L}\right)_5}=\frac{I_6}{I_5} \\
 & \therefore\left(\frac{W}{L}\right)_7=12
 \end{aligned}
-
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
