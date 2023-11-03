@@ -110,17 +110,29 @@ Now let us consider the minimum ```L = 240nm``` (L>2*90nm) to avoid any effect o
 The design of M1 and M2 depends on the ```GBP``` and ```Cc```
 
 ```math
+$$
 \begin{aligned}
-& g_{m_1} & =GBP \times C_c \times 2 \pi\\
-& g_{m_1} & =113.1 \mu \mathrm{S}\\
-& \therefore \text{Let}\ g_{m_1} &=120 \mu \mathrm{s}\\
-& I_D =\mu_n \text{Cox}\left(\frac{W}{L}\right) \cdot \frac{\left(V_{G S}-V_t\right)^2}{2}\\
-& g_m =\frac{\partial I_{D S}}{\partial V_{G S}}=\mu_n \text{Cox}\left(\frac{W}{L}\right)\left(V_{G S}-V_T\right)\\
-& {g_{m}}^2=\left[\mu_n \text{Cox}\left(\frac{w}{L}\right)\right]^2 \frac{\left(V_{G S}-V_{t}\right)^2}{2} \times 2\\
-& {g_m}^2=2 I_D \times \mu_n \text{Cox}\left(\frac{W}{L}\right)\\
-& \left(\frac{W}{L}\right) = 2.28575\\
-& \therefore \text{Let}\left(\frac{W}{L}\right) = 3\\
+g_{m_1} & =GBP \times C_c \times 2 \pi \\
+g_{m_1} & =113.1 \mu \mathrm{S}\\
+\therefore Let\ g_{m_1} &=120 \mu \mathrm{s}\\
 \end{aligned}
+$$
+
+$$
+\begin{aligned}
+I_D =\mu_n \text{Cox}\left(\frac{W}{L}\right) \cdot \frac{\left(V_{G S}-V_t\right)^2}{2} \\
+g_m =\frac{\partial I_{D S}}{\partial V_{G S}}=\mu_n \text{Cox}\left(\frac{W}{L}\right)\left(V_{G S}-V_T\right)\\
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+{g_{m}}^2=\left[\mu_n \text{Cox}\left(\frac{w}{L}\right)\right]^2 \frac{\left(V_{G S}-V_{t}\right)^2}{2} \times 2 \\
+{g_m}^2=2 I_D \times \mu_n \text{Cox}\left(\frac{W}{L}\right)\\
+\left(\frac{W}{L}\right) = 2.28575\\
+\therefore Let\left(\frac{W}{L}\right) = 3\\
+\end{aligned}
+$$
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -134,7 +146,7 @@ The design of M3 and M4 depends on ```ICMR+```, consider only M3 and M1 from the
 ```math
 $$
 \begin{aligned}
-& I_3=\mu_p \operatorname{C_{ox}}\left(\frac{W}{L}\right) \frac{\left(V_{GS}-V_{t}\right)^2}{2} \\
+& I_3=\mu_p \text{C_{ox}}\left(\frac{W}{L}\right) \frac{\left(V_{GS}-V_{t}\right)^2}{2} \\
 & V_{G S}=\sqrt{\frac{2 I_3}{\mu_p C_{ox}}}+\left|V_{t3}\right|
 \end{aligned}
 $$
