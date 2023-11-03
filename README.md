@@ -115,7 +115,7 @@ The design of M1 and M2 depends on the ```GBP``` and ```Cc```
 & g_{m_1} & =113.1 \mu \mathrm{S}\\
 & \therefore \text{Let}\ g_{m_1} &=120 \mu \mathrm{s}\\
 & I_D =\mu_n \text{Cox}\left(\frac{W}{L}\right) \cdot \frac{\left(V_{G S}-V_t\right)^2}{2}\\
-& g_m =\frac{\partial I_{D S}}{\partial V_{G S}}=\mu_n \operatorname{cox}\left(\frac{W}{L}\right)\left(V_{G S}-V_T\right)\\
+& g_m =\frac{\partial I_{D S}}{\partial V_{G S}}=\mu_n \text{Cox}\left(\frac{W}{L}\right)\left(V_{G S}-V_T\right)\\
 & {g_{m}}^2=\left[\mu_n \text{Cox}\left(\frac{w}{L}\right)\right]^2 \frac{\left(V_{G S}-V_{t}\right)^2}{2} \times 2\\
 & {g_m}^2=2 I_D \times \mu_n \text{Cox}\left(\frac{W}{L}\right)\\
 & \left(\frac{W}{L}\right) = 2.28575\\
