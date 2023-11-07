@@ -37,6 +37,7 @@
     <li><a href="#design-of-m5-and-m8">Design of M5 and M8</a></li>
     <li><a href="#design-of-m6">Design of M6</a></li>
     <li><a href="#design-of-m7">Design of M7</a></li>
+    <li><a href="#adjusted-(W/L)ratios">Adjusted-(W/L)Ratios</a></li>
     <li><a href="layout-design">Layout Design</a></li>
   </ol>
 </details>
@@ -211,7 +212,7 @@ The design of M6 depends on ```PM```, to achieve 60 degrees PM:
 <!-- Design of M7 -->
 ## Design of M7
 
-The design of M6 depends on ```W/L of M5```, to achieve 60 degrees PM:
+The design of M6 depends on ```W/L of M6```:
 ```math
 \begin{aligned}
 & \frac{I_6}{I_4}=\frac{(W / L)_6}{(W / L)_4} \\
@@ -223,6 +224,25 @@ The design of M6 depends on ```W/L of M5```, to achieve 60 degrees PM:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+<!-- Adjusted (W/L) Ratios -->
+## Adjusted (W/L) Ratios
+
+After the schematic simulation, some adjustment needs to be made to the (W/L) ratios of some of the MOSFETs to meet the specifications.
+
+The length of M7 is changed from 240n to 800n therefore making the width 9.6u maintaining the same (W/L) ratio calculated previously. To maintain monotonicity and matching the L of M5 and M8 are also changed to 800n. This has no effect on the ```PM```, ```Slew Rate``` and brings some improvement in the overall gain. 
+
+The final widths and lengths for the MOSFETs are:
+
+<table align="center">
+| MOSFET       | WIDTH (W)      | LENGTH (L)    | W/L RATIO  |
+|    :---:     |     :---:      |     :---:     |   :---:    |
+| M1 & M2      | 720n           | 240n          | 3          |
+| M3 & M4      | 2.16u          | 240n          | 9          |
+| M5 & M8      | 2.4u           | 800n          | 3          |
+| M6           | 15.35u         | 240n          | 64         |
+| M7           | 9.6u           | 800n          | 12         |
+</table>
 
 <!-- Layout Design -->
 ## Layout Design
