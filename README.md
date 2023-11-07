@@ -234,15 +234,16 @@ The length of M7 is changed from 240n to 800n therefore making the width 9.6u ma
 
 The final widths and lengths for the MOSFETs are:
 
-<table align="center">
-| MOSFET       | WIDTH (W)      | LENGTH (L)    | W/L RATIO  |
-|    :---:     |     :---:      |     :---:     |   :---:    |
-| M1 & M2      | 720n           | 240n          | 3          |
-| M3 & M4      | 2.16u          | 240n          | 9          |
-| M5 & M8      | 2.4u           | 800n          | 3          |
-| M6           | 15.35u         | 240n          | 64         |
-| M7           | 9.6u           | 800n          | 12         |
-</table>
+| MOSFET       | WIDTH (W)      | LENGTH (L)    | (W/L) RATIO  |
+|    :---:     |     :---:      |     :---:     |   :---:      |
+| M1 & M2      | 720n           | 240n          | 3            |
+| M3 & M4      | 2.16u          | 240n          | 9            |
+| M5 & M8      | 2.4u           | 800n          | 3            |
+| M6           | 15.35u         | 240n          | 64           |
+| M7           | 9.6u           | 800n          | 12           |
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- Layout Design -->
 ## Layout Design
