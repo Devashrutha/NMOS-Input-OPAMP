@@ -3,7 +3,7 @@
 <br />
 <div align="center">
 
-  <h3 align="center">NMOS input OPAMP</h3>
+  <h3 align="center">90nm NMOS input OPAMP</h3>
 
   <p align="center">
     Schematic and Layout design using Cadence Virtuoso at 90nm technology
@@ -47,14 +47,15 @@
 <!-- ABOUT THE PROJECT -->
 ## Introduction
 
-[![OPAMP][product-screenshot]](https://upload.wikimedia.org/wikipedia/commons/9/97/Op-amp_symbol.svg)
+![nmos_opamp_lay](https://github.com/Devashrutha/NMOS-Input-OPAMP/assets/61559101/b7d0cf62-148e-470f-ba61-9ef983f4c02c)
 
-The most popular approach for CMOS OPAMPs has been the two stage architecture. It consists of a differential input stage followed by a second gain stage. In some cases where the output is a resistive load a buffer is used. OPAMPs usually have low output impedance as they are used as amplifiers so that maximum power is transfered to the load. This design includes a NMOS input differential amplifier with NMOS current mirror and PMOS active load followed by a common source amplifier. There are several advantages for choosing NMOS input mosfets instead of PMOS. 
+
+The most popular approach for CMOS OPAMPs has been the two-stage architecture. It consists of a differential input stage followed by a second gain stage. In some cases where the output is a resistive load, a buffer is used. OPAMPs usually have low output impedance as they are used as amplifiers so that maximum power is transferred to the load. This design includes an NMOS input differential amplifier with an NMOS current mirror and PMOS active load followed by a common source amplifier. There are several advantages to choosing NMOS input MOSFETs instead of PMOS. 
 
 Here's why:
 * NMOS input OPAMPS typically have low input impedance, which means they are less prone to input capacitance problems.
-* They offer high speed operation for use in DSP circuits.
-* They consume less power that their counterpart making them more power-efficient.
+* They offer high-speed operation for use in DSP circuits.
+* They consume less power than their counterpart making them more power-efficient.
 * Better noise performance.
 
 Of course, the choice between NMOS input and PMOS input depends on the application and requirements.
@@ -68,16 +69,16 @@ Of course, the choice between NMOS input and PMOS input depends on the applicati
 
 This section gives the required specifications that the final OPAMP design must satisfy:
 
-* DC gain:
-* Gain Bandwidth Product (GBP) : 30MHz
-* Phase Margin (PM) : 60 degrees
-* Slew Rate : 20V/us
-* VDD : 1.8V
-* Input Common Mode Randge High (ICMR+) : 1.6V
-* Input Common Mode Randge Low (ICMR-) : 0.8V
-* Load Capacitance (CL) : 2pF
-* Power Consumption <= 300uW
-* Coupling Capacitor (Cc) >= 0.22*CL
+* DC gain: `45dB`
+* Gain Bandwidth Product (GBP) : `30MHz`
+* Phase Margin (PM) : `60 degrees`
+* Slew Rate : `20V/us`
+* VDD : `1.8V`
+* Input Common Mode Randge High (ICMR+) : `1.6V`
+* Input Common Mode Randge Low (ICMR-) : `0.8V`
+* Load Capacitance (CL) : `2pF`
+* Power Consumption <= `300uW`
+* Coupling Capacitor (Cc) >= `0.22*CL`
 
 
 
@@ -137,7 +138,7 @@ The design of M3 and M4 depends on ```ICMR+```, consider only M3 and M1 from the
 & I_3 = \mu_p \text{C}_{ox}\left(\frac{W}{L}\right) \frac{\left(V_{GS}-V_{t}\right)^2}{2} \\
 & V_{GS} = \sqrt{\frac{2 I_3}{\mu_p \text{C}_{ox}}} + \left|V_{t3}\right| \\
 & \therefore\, V_{D1} = V_{DD} - \sqrt{\frac{2 I_3}{\beta_p}} - \left|V_{t3}\right| \\
-& ICMR^{+} &\leq V_{D1} + V_{t1} \\
+& ICMR^{+} \leq V_{D1} + V_{t1} \\
 & \left(\frac{W}{L}\right)_3 = \frac{2 I_{D3}}{\left.\mu_p \text{C}_{ox}\left[V_{DD} - ICMR^{+} - \left|V_{t3}\right|_{\text{max}} + V_{t1}\right]_{\text{min}}\right]^2}
 \end{align}
 ```
@@ -234,13 +235,14 @@ The length of M7 is changed from 240n to 800n therefore making the width 9.6u ma
 
 The final widths and lengths for the MOSFETs are:
 
+
 | MOSFET       | WIDTH (W)      | LENGTH (L)    | (W/L) RATIO  |
 |    :---:     |     :---:      |     :---:     |   :---:      |
-| M1 & M2      | 720n           | 240n          | 3            |
-| M3 & M4      | 2.16u          | 240n          | 9            |
-| M5 & M8      | 2.4u           | 800n          | 3            |
-| M6           | 15.35u         | 240n          | 64           |
-| M7           | 9.6u           | 800n          | 12           |
+| `M1 & M2`    | 720n           | 240n          | `3`          |
+| `M3 & M4`    | 2.16u          | 240n          | `9`          |
+| `M5 & M8`    | 2.4u           | 800n          | `3`          |
+| `M6`         | 15.35u         | 240n          | `64`         |
+| `M7`         | 9.6u           | 800n          | `12`         |
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
