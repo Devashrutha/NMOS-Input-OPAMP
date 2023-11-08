@@ -71,7 +71,7 @@ This section gives the required specifications that the final OPAMP design must 
 
 * DC gain : `47dB`
 * Gain Bandwidth Product (GBP) : `30MHz`
-* Phase Margin (PM) : `60 degrees`
+* Phase Margin (PM) : `> 60 degrees`
 * Slew Rate : `20V/us`
 * VDD : `1.8V`
 * Input Common Mode Randge High (ICMR+) : `1.6V`
