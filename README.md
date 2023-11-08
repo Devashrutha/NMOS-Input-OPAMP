@@ -13,7 +13,7 @@
     <br />
     <br />
   </p>
-   <img src = "https://github.com/Devashrutha/NMOS-Input-OPAMP/assets/61559101/05cd0f7d-1491-4511-9c3d-f3220633acb1">
+   <img src = "/Pictures/Layout/nmos_opamp_lay_logo.png">
 </div>
 
 
