@@ -250,7 +250,7 @@ The final widths and lengths for the MOSFETs are:
 | `M6`         | 15.35u         | 240n          | `64`         |
 | `M7`         | 9.6u           | 800n          | `12`         |
 
-
+Further improvement can be made to increase the gain, GBP, and PM of the OPAMP by simulating and re-adjusting the ratios.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
