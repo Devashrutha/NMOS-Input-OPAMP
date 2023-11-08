@@ -260,7 +260,7 @@ Further improvements can be made to increase the gain, GBP, and PM of the OPAMP 
 The below layout design shows the NMOS input OPAMP with the PMOS coupling capacitor. 
 
 <div align="center">
-  <img src= "https://github.com/Devashrutha/NMOS-Input-OPAMP/assets/61559101/6b2490d9-4818-4692-ab22-61108fcff525">
+  <img src= "https://github.com/Devashrutha/NMOS-Input-OPAMP/assets/61559101/cf40d28d-e2d1-48e4-b4ed-49dc2d9a7506">
 </div>
 
 
