@@ -4,7 +4,6 @@
 <div align="center">
 
   <h3 align="center">90nm NMOS input OPAMP</h3>
-
   <p align="center">
     Schematic and Layout design using Cadence Virtuoso at 90nm technology
     <br />
@@ -12,6 +11,7 @@
     <br />
     <br />
   </p>
+   <img src = "https://github.com/Devashrutha/NMOS-Input-OPAMP/assets/61559101/05cd0f7d-1491-4511-9c3d-f3220633acb1">
 </div>
 
 
@@ -37,8 +37,9 @@
     <li><a href="#design-of-m5-and-m8">Design of M5 and M8</a></li>
     <li><a href="#design-of-m6">Design of M6</a></li>
     <li><a href="#design-of-m7">Design of M7</a></li>
-    <li><a href="#adjusted-(W/L)ratios">Adjusted-(W/L)Ratios</a></li>
+    <li><a href="#adjusted-width-and-length-ratios">Adjusted Width and Length Ratios</a></li>
     <li><a href="layout-design">Layout Design</a></li>
+    <li><a href="simulation-results">Simulation Results</a></li>
   </ol>
 </details>
 
@@ -46,9 +47,6 @@
 
 <!-- ABOUT THE PROJECT -->
 ## Introduction
-
-![nmos_opamp_lay](https://github.com/Devashrutha/NMOS-Input-OPAMP/assets/61559101/b7d0cf62-148e-470f-ba61-9ef983f4c02c)
-
 
 The most popular approach for CMOS OPAMPs has been the two-stage architecture. It consists of a differential input stage followed by a second gain stage. In some cases where the output is a resistive load, a buffer is used. OPAMPs usually have low output impedance as they are used as amplifiers so that maximum power is transferred to the load. This design includes an NMOS input differential amplifier with an NMOS current mirror and PMOS active load followed by a common source amplifier. There are several advantages to choosing NMOS input MOSFETs instead of PMOS. 
 
@@ -69,7 +67,7 @@ Of course, the choice between NMOS input and PMOS input depends on the applicati
 
 This section gives the required specifications that the final OPAMP design must satisfy:
 
-* DC gain: `45dB`
+* DC gain : `47dB`
 * Gain Bandwidth Product (GBP) : `30MHz`
 * Phase Margin (PM) : `60 degrees`
 * Slew Rate : `20V/us`
@@ -77,7 +75,7 @@ This section gives the required specifications that the final OPAMP design must 
 * Input Common Mode Randge High (ICMR+) : `1.6V`
 * Input Common Mode Randge Low (ICMR-) : `0.8V`
 * Load Capacitance (CL) : `2pF`
-* Power Consumption <= `300uW`
+* Power Consumption <= `200uW`
 * Coupling Capacitor (Cc) >= `0.22*CL`
 
 
@@ -89,13 +87,17 @@ This section gives the required specifications that the final OPAMP design must 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Using Cadence Virtuso with gpdk90 technology we will first use the above specifications to find the (W/L) ratios for the various mosfets. All the manual calculations is included in the project directory.
+Using Cadence Virtuoso with gpdk90 technology we shall first use the above specifications to find the (W/L) ratios for the various MOSFETs. All the manual calculations are included in the project directory.
 
 ### Prerequisites
 
 Before finding the (W/L) ratios we need to know the upCox and unCox values of PMOS and NMOS by driving them to saturation or region 2. Let us consider ```L = 1um, W = 10um, Ibias = 50uA, VDD = 3V```. Using the following schematic we find the DC operating points using the DC analysis in the ADE window.
 
-The Beff(Effective beta) is found from each of the mosfets using the above W and L. Then we find the upCox and unCox using the formula: 
+<div align ="center">
+  <img src = "https://github.com/Devashrutha/NMOS-Input-OPAMP/assets/61559101/7e718d14-11f8-4798-820a-a8fa32d4870a">
+</div>
+
+The Beff(Effective beta) is found from each of the MOSFETs using the above W and L. Then we find the upCox and unCox using the formula: 
 
 ```math
 \begin{aligned}
@@ -104,7 +106,11 @@ The Beff(Effective beta) is found from each of the mosfets using the above W and
 \end{aligned}
 ```
 
-Now let us consider the minimum ```L = 240nm``` (L>2*90nm) to avoid any effect of Channel Length Modulation, ```Cc = 600fF``` and the ```Slew Rate = 20uA``` (Ibias/Cc, ends up to be 12uA but its the minimum). Using the following schematic can find the W/L ratios.
+Now let us consider the minimum ```L = 240nm``` (L>2*90nm) to avoid any effect of Channel Length Modulation, ```Cc = 600fF``` and the ```Slew Rate = 20uA``` (Ibias/Cc, ends up to be 12uA but its the minimum). Using the following schematic can find the W/L ratios. The schematic also contains 1 NMOS device and 1 PMOS device that act as a `Dummy`, each with a multiplier 2 to protect the critical `Differential Input NMoSs` and the `PMOS active loads` against any `process variations` due to the `guard ring around` them. 
+
+<div align ="center">
+  <img src = "https://github.com/Devashrutha/NMOS-Input-OPAMP/assets/61559101/0429765f-0749-4876-9ee5-93658cc16db4">
+</div>
 
 <!-- USAGE EXAMPLES -->
 ## Design of M1 and M2
@@ -142,7 +148,11 @@ The design of M3 and M4 depends on ```ICMR+```, consider only M3 and M1 from the
 & \left(\frac{W}{L}\right)_3 = \frac{2 I_{D3}}{\left.\mu_p \text{C}_{ox}\left[V_{DD} - ICMR^{+} - \left|V_{t3}\right|_{\text{max}} + V_{t1}\right]_{\text{min}}\right]^2}
 \end{align}
 ```
-Now we need to find Vt3max and Vt1min. This can be done using another schematic consisting of only the differential input stage of the OPAMP and simulating the DC oerating points in the ADE.
+Now we need to find Vt3max and Vt1min. This can be done using another schematic consisting of only the differential input stage of the OPAMP and simulating the DC operating points in the ADE.
+
+<div align ="center">
+  <img src = "https://github.com/Devashrutha/NMOS-Input-OPAMP/assets/61559101/94874a34-c033-48ee-83fb-053c9774c4e0">
+</div>
 
 We then get:
 
@@ -156,12 +166,6 @@ We then get:
 & \therefore \text { Let } \frac{W}{L}_{3,4}=9
 \end{aligned}
 ```
-
-
-
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- Design of M5 and M8 -->
@@ -227,7 +231,7 @@ The design of M6 depends on ```W/L of M6```:
 
 
 <!-- Adjusted (W/L) Ratios -->
-## Adjusted (W/L) Ratios
+## Adjusted Width and Length Ratios
 
 After the schematic simulation, some adjustment needs to be made to the (W/L) ratios of some of the MOSFETs to meet the specifications.
 
@@ -250,9 +254,57 @@ The final widths and lengths for the MOSFETs are:
 <!-- Layout Design -->
 ## Layout Design
 
+<div align="center">
+  <img src= "https://github.com/Devashrutha/NMOS-Input-OPAMP/assets/61559101/6b2490d9-4818-4692-ab22-61108fcff525">
+</div>
 
+The above layout design shows the NMOS input OPAMP with the PMOS coupling capacitor. 
+
+* M1 in `Blue`, M2 in `Red`, M3 in `Light Green`, Poly in `Dark Green`
+* The PMOS devices are placed in their `nwells`, since the PMOSCAP does not share the same body voltage as the other PMOSs it resides in its own nwell.
+* A `PMOSCAP` was used instead of a `mimcap` to save space. We know that the gate capacitance of a MOSFET can mimic a capacitor when all the other terminals (D, S, B) are shorted.
+* The `guard rings` are basically `large taps` that help to isolate devices from each other creating a low resistance well. It `prevents any charge buildup` and `noise` by other devices from affecting the operation of the guarded group.
+* The pins `Ibias`, `V+`, `V-`, and `Vout` is brought up to M3 while the VSS and VDD pins are left at M1. This really depends on the overall design in which this OPAMP might sit.
+* The total area occupied by this 11 MOSFET OPAMP is `170pm^2`.
+  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- Simulation Results -->
+## Simulation Results
 
+* Achieved Gain     : `46.42dB` and `47.54dB` at 1.6v and 0.8v respectively.
+* Achieved GBP                : `27.528MHz` and `27.187MHz` at 1.6v and 0.8v respectively.
+* Achieved PM               : `65.9 degrees` and `65.9 degrees` at 1.6v and 0.8v respectively.
+* Power consumption : `197.394uW` and `194.372uW` at 1.6v and 0.8v respectively.
 
+`Clubbed simulation output for AC Gain and Phase`:
+<div align="center">
+  <img src= "https://github.com/Devashrutha/NMOS-Input-OPAMP/assets/61559101/a8217653-bdbb-4ead-a54f-abeca9a714dd">
+
+</div>
+
+`DRC check`:
+<div align="center">
+    <img src= "https://github.com/Devashrutha/NMOS-Input-OPAMP/assets/61559101/de480eb0-dd55-4524-8b8c-d5acf734613e">
+
+</div>
+
+`LVS check`:
+<div align="center">
+    <img src= "https://github.com/Devashrutha/NMOS-Input-OPAMP/assets/61559101/2dc70ec8-34f8-4b3d-9d17-72cb980bee34">
+
+</div>
+
+`PWR consumption at 1.6V`:
+<div align="center">
+    <img src= "https://github.com/Devashrutha/NMOS-Input-OPAMP/assets/61559101/c54fb77c-a6c7-4a91-af95-d31465c5a0a6">
+
+</div>
+
+`PWR consumption at 0.8V`:
+<div align="center">
+    <img src= "https://github.com/Devashrutha/NMOS-Input-OPAMP/assets/61559101/f80f121c-5072-4ab6-b885-2cabfc821af3">
+</div>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
