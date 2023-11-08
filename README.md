@@ -40,8 +40,8 @@
     <li><a href="#design-of-m6">Design of M6</a></li>
     <li><a href="#design-of-m7">Design of M7</a></li>
     <li><a href="#adjusted-width-and-length-ratios">Adjusted Width and Length Ratios</a></li>
-    <li><a href="layout-design">Layout Design</a></li>
-    <li><a href="simulation-results">Simulation Results</a></li>
+    <li><a href="#layout-design">Layout Design</a></li>
+    <li><a href="#simulation-results">Simulation Results</a></li>
   </ol>
 </details>
 
@@ -250,7 +250,7 @@ The final widths and lengths for the MOSFETs are:
 | `M6`         | 15.35u         | 240n          | `64`         |
 | `M7`         | 9.6u           | 800n          | `12`         |
 
-Further improvement can be made to increase the gain, GBP, and PM of the OPAMP by simulating and re-adjusting the ratios.
+Further improvements can be made to increase the gain, GBP, and PM of the OPAMP by simulating and re-adjusting the ratios.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
