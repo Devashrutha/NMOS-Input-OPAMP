@@ -1,4 +1,6 @@
+
 <a name="readme-top"></a>
+
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -251,14 +253,16 @@ The final widths and lengths for the MOSFETs are:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
 <!-- Layout Design -->
 ## Layout Design
+
+The below layout design shows the NMOS input OPAMP with the PMOS coupling capacitor. 
 
 <div align="center">
   <img src= "https://github.com/Devashrutha/NMOS-Input-OPAMP/assets/61559101/6b2490d9-4818-4692-ab22-61108fcff525">
 </div>
 
-The above layout design shows the NMOS input OPAMP with the PMOS coupling capacitor. 
 
 * M1 in `Blue`, M2 in `Red`, M3 in `Light Green`, Poly in `Dark Green`
 * The PMOS devices are placed in their `nwells`, since the PMOSCAP does not share the same body voltage as the other PMOSs it resides in its own nwell.
@@ -269,8 +273,11 @@ The above layout design shows the NMOS input OPAMP with the PMOS coupling capaci
   
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
 <!-- Simulation Results -->
 ## Simulation Results
+
+The following results are the obtained values after post-layout simulation.
 
 * Achieved Gain     : `46.42dB` and `47.54dB` at 1.6v and 0.8v respectively.
 * Achieved GBP                : `27.528MHz` and `27.187MHz` at 1.6v and 0.8v respectively.
