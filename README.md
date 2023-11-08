@@ -96,7 +96,7 @@ Using Cadence Virtuoso with gpdk90 technology we shall first use the above speci
 Before finding the (W/L) ratios we need to know the upCox and unCox values of PMOS and NMOS by driving them to saturation or region 2. Let us consider ```L = 1um, W = 10um, Ibias = 50uA, VDD = 3V```. Using the following schematic we find the DC operating points using the DC analysis in the ADE window.
 
 <div align ="center">
-  <img src = "https://github.com/Devashrutha/NMOS-Input-OPAMP/assets/61559101/7e718d14-11f8-4798-820a-a8fa32d4870a">
+  <img src = "/Pictures/Schematic/unCox.png">
 </div>
 
 The Beff(Effective beta) is found from each of the MOSFETs using the above W and L. Then we find the upCox and unCox using the formula: 
@@ -108,10 +108,10 @@ The Beff(Effective beta) is found from each of the MOSFETs using the above W and
 \end{aligned}
 ```
 
-Now let us consider the minimum ```L = 240nm``` (L>2*90nm) to avoid any effect of Channel Length Modulation, ```Cc = 600fF``` and the ```Slew Rate = 20uA``` (Ibias/Cc, ends up to be 12uA but its the minimum). Using the following schematic can find the W/L ratios. The schematic also contains 1 NMOS device and 1 PMOS device that act as a `Dummy`, each with a multiplier 2 to protect the critical `Differential Input NMoSs` and the `PMOS active loads` against any `process variations` due to the `guard ring around` them. 
+Now let us consider the minimum ```L = 240nm``` (L>2*90nm) to avoid any effect of Channel Length Modulation, ```Cc = 600fF``` and the ```Slew Rate = 20uA``` (Ibias/Cc, ends up to be 12uA but its the minimum). Using the following schematic can find the W/L ratios. The schematic also contains 1 NMOS device and 1 PMOS device that act as a `Dummy`, each with a multiplier 2 to protect the critical `Differential Input NMOSs` and the `PMOS active loads` against any `process variations` due to the `guard ring around` them. 
 
 <div align ="center">
-  <img src = "https://github.com/Devashrutha/NMOS-Input-OPAMP/assets/61559101/0429765f-0749-4876-9ee5-93658cc16db4">
+  <img src = "/Pictures/Schematic/nmos_opamp_sch.png">
 </div>
 
 <!-- USAGE EXAMPLES -->
@@ -153,7 +153,7 @@ The design of M3 and M4 depends on ```ICMR+```, consider only M3 and M1 from the
 Now we need to find Vt3max and Vt1min. This can be done using another schematic consisting of only the differential input stage of the OPAMP and simulating the DC operating points in the ADE.
 
 <div align ="center">
-  <img src = "https://github.com/Devashrutha/NMOS-Input-OPAMP/assets/61559101/94874a34-c033-48ee-83fb-053c9774c4e0">
+  <img src = "/Pictures/Schematic/VtminVtmax.png">
 </div>
 
 We then get:
@@ -260,7 +260,7 @@ Further improvements can be made to increase the gain, GBP, and PM of the OPAMP 
 The below layout design shows the NMOS input OPAMP with the PMOS coupling capacitor. 
 
 <div align="center">
-  <img src= "https://github.com/Devashrutha/NMOS-Input-OPAMP/assets/61559101/cf40d28d-e2d1-48e4-b4ed-49dc2d9a7506">
+  <img src= "/Pictures/Layout/nmos_opamp_lay.png">
 </div>
 
 
@@ -286,31 +286,31 @@ The following results are the obtained values after post-layout simulation.
 
 `Clubbed simulation output for AC Gain and Phase`:
 <div align="center">
-  <img src= "https://github.com/Devashrutha/NMOS-Input-OPAMP/assets/61559101/a8217653-bdbb-4ead-a54f-abeca9a714dd">
+  <img src= "/Pictures/Results/Clubbed Output (LVS AV_ext).png">
 
 </div>
 
 `DRC check`:
 <div align="center">
-    <img src= "https://github.com/Devashrutha/NMOS-Input-OPAMP/assets/61559101/de480eb0-dd55-4524-8b8c-d5acf734613e">
+    <img src= "/Pictures/Results/DRC.png">
 
 </div>
 
 `LVS check`:
 <div align="center">
-    <img src= "https://github.com/Devashrutha/NMOS-Input-OPAMP/assets/61559101/2dc70ec8-34f8-4b3d-9d17-72cb980bee34">
+    <img src= "/Pictures/Results/LVS.png">
 
 </div>
 
 `PWR consumption at 1.6V`:
 <div align="center">
-    <img src= "https://github.com/Devashrutha/NMOS-Input-OPAMP/assets/61559101/c54fb77c-a6c7-4a91-af95-d31465c5a0a6">
+    <img src= "/Pictures/Results/PWR_1.6.png">
 
 </div>
 
 `PWR consumption at 0.8V`:
 <div align="center">
-    <img src= "https://github.com/Devashrutha/NMOS-Input-OPAMP/assets/61559101/f80f121c-5072-4ab6-b885-2cabfc821af3">
+    <img src= "/Pictures/Results/PWR_0.8.png">
 </div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
