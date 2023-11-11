@@ -265,10 +265,11 @@ The below layout design shows the NMOS input OPAMP with the PMOS coupling capaci
 
 
 * M1 in `Blue`, M2 in `Red`, M3 in `Light Green`, Poly in `Dark Green`
-* The PMOS devices are placed in their `nwells`, since the PMOSCAP does not share the same body voltage as the other PMOSs it resides in its own nwell.
+* The critical device being the differential pair is placed such that it results in minimum trace length between other devices and itself.
+* The PMOS devices are placed in their `nwells` since the PMOSCAP does not share the same body voltage as the other PMOSs it resides in its nwell.
 * A `PMOSCAP` was used instead of a `mimcap` to save space. We know that the gate capacitance of a MOSFET can mimic a capacitor when all the other terminals (D, S, B) are shorted.
 * The `guard rings` are basically `large taps` that help to isolate devices from each other creating a low resistance well. It `prevents any charge buildup` and `noise` by other devices from affecting the operation of the guarded group.
-* The pins `Ibias`, `V+`, `V-`, and `Vout` is brought up to M3 while the VSS and VDD pins are left at M1. This really depends on the overall design in which this OPAMP might sit.
+* The pins `Ibias`, `V+`, `V-`, and `Vout` are brought up to M3 while the VSS and VDD pins are left at M1. This really depends on the overall design in which this OPAMP might sit.
 * The total area occupied by this 11 MOSFET OPAMP is `170pm^2`.
   
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
