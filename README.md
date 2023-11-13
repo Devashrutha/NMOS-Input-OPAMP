@@ -264,6 +264,7 @@ The below layout design shows the NMOS input OPAMP with the PMOS coupling capaci
 </div>
 
 
+* The floorplan is based on `Constructive Placement` following the `min-cut` algorithm. Where the devices are placed such that there are minimum connection edges across the boundaries.
 * M1 in `Blue`, M2 in `Red`, M3 in `Light Green`, Poly in `Dark Green`
 * The critical device being the differential pair is placed such that it results in minimum trace length between other devices and itself.
 * The PMOS devices are placed in their `nwells` since the PMOSCAP does not share the same body voltage as the other PMOSs it resides in its nwell.
