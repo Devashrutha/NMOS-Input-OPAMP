@@ -257,7 +257,7 @@ Further improvements can be made to increase the gain, GBP, and PM of the OPAMP 
 <!-- Layout Design -->
 ## Layout Design
 
-The below layout design shows the NMOS input OPAMP with the PMOS coupling capacitor. 
+The layout design below shows the NMOS input OPAMP with the PMOS coupling capacitor. 
 
 <div align="center">
   <img src= "/Pictures/Layout/nmos_opamp_lay.png">
@@ -265,6 +265,7 @@ The below layout design shows the NMOS input OPAMP with the PMOS coupling capaci
 
 
 * The floorplan is based on `Constructive Placement` following the `min-cut` algorithm. Where the devices are placed such that there are minimum connection edges across the boundaries.
+* All the metal layers are modified to have equal width and T structures are avoided wherever possible. This reduces the chances of electromigration effects (Hillocks or Voids).
 * M1 in `Blue`, M2 in `Red`, M3 in `Light Green`, Poly in `Dark Green`
 * The critical device being the differential pair is placed such that it results in minimum trace length between other devices and itself.
 * The PMOS devices are placed in their `nwells` since the PMOSCAP does not share the same body voltage as the other PMOSs it resides in its nwell.
