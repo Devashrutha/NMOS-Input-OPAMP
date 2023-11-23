@@ -228,6 +228,12 @@ The design of M6 depends on ```W/L of M6```:
 & \therefore\left(\frac{W}{L}\right)_7=12
 \end{aligned}
 ```
+The final test bench circuit for simulation is as follows:
+
+<div align ="center">
+  <img src = "/Pictures/Schematic/nmos_opamp_tb.png">
+</div>
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
